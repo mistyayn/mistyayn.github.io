@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Declare and Initialize
 
 It's been a long time since I've used a strong typed language. After using some code from a <a href="https://www.youtube.com/watch?v=jFfo23yIWac&list=RDCMUC8butISFwT-Wl7EV0hUK0BQ&start_radio=1&rv=jFfo23yIWac&t=56">tutorial</a> (<a href="https://github.com/AkhilSharma90/Golang-MySQL-CRUD-Bookstore-Management-API">github repo</a>) I was encountering a problem and couldn't figure out why.
