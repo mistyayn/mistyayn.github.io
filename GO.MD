@@ -54,6 +54,8 @@ func CreateUser(w http.ResponseWriter, r *http.Request){
 
 After going through a really good <a href="https://www.youtube.com/watch?v=jFfo23yIWac&list=RDCMUC8butISFwT-Wl7EV0hUK0BQ&start_radio=1&rv=jFfo23yIWac&t=56">tutorial</a> (<a href="https://github.com/AkhilSharma90/Golang-MySQL-CRUD-Bookstore-Management-API">github repo</a>) I realized I didn't understand parts of the code that used the gorm.DB package.
 
+This is using <a href="github.com/jinzhu/gorm">gorm</a>
+
 The fir of code in questions was:
 
 ```
@@ -69,6 +71,8 @@ I didn't understand the purpose of returning the gorm.DB object. What I figured 
 # gorm.db Object Create
 
 I learned an interesting bit of information from this little chunk of code:
+
+This is using <a href="github.com/jinzhu/gorm">gorm</a>
 
 ```
 func (b *User) CreateUser() *User{
