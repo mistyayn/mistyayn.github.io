@@ -50,11 +50,11 @@ func CreateUser(w http.ResponseWriter, r *http.Request){
 }
 ```
 
-# gorm.DB Object
+# Returning gorm.DB Object
 
-After going through a really good<a href="https://www.youtube.com/watch?v=jFfo23yIWac&list=RDCMUC8butISFwT-Wl7EV0hUK0BQ&start_radio=1&rv=jFfo23yIWac&t=56">tutorial</a> (<a href="https://github.com/AkhilSharma90/Golang-MySQL-CRUD-Bookstore-Management-API">github repo</a>) I realized I didn't understand part of the code that used the gorm.DB package.
+After going through a really good <a href="https://www.youtube.com/watch?v=jFfo23yIWac&list=RDCMUC8butISFwT-Wl7EV0hUK0BQ&start_radio=1&rv=jFfo23yIWac&t=56">tutorial</a> (<a href="https://github.com/AkhilSharma90/Golang-MySQL-CRUD-Bookstore-Management-API">github repo</a>) I realized I didn't understand parts of the code that used the gorm.DB package.
 
-The chunk of code in questions was:
+The fir of code in questions was:
 
 ```
 func GetUserByUniqueId(UniqueID string) (*User, *gorm.DB){
@@ -65,3 +65,21 @@ func GetUserByUniqueId(UniqueID string) (*User, *gorm.DB){
 ```
 
 I didn't understand the purpose of returning the gorm.DB object. What I figured out was that in the tutorial the GetUserByID func which I had copied and modified in order to create this bit of code was also being used in an update function. returning the gorm.DB object faciliated being able to update the object in a different part of the code. Removing the return of this object didn't break my code because I was planning on updating the record in a different way. 
+
+# gorm.db Object Create
+
+I learned an interesting bit of information from this little chunk of code:
+
+```
+func (b *User) CreateUser() *User{
+	db.NewRecord(b)
+	db.Create(&b)
+	return b
+}
+```
+
+After creating a unique constraint for one of the values in the user table I discovered that if I try and insert a duplicate record the user object will still get populated.
+
+With one exception: I have a another primary key ID in my table (no judging this was for learning purposes). What I learned is that the record that gets returned has all the columns populated except for the primary key. Not the end of the world but insteresting information.
+
+
