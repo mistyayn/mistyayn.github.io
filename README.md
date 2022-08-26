@@ -7,3 +7,8 @@
 [gorm.DB Object Create](https://github.com/mistyayn/mistyayn.github.io/blob/main/GO.MD#gormdb-object-create)
 
 
+# Python Learnings
+
+# Terraform Learnings
+
+# K8s Learnings
