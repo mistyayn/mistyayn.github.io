@@ -6,6 +6,8 @@
 
 [gorm.DB Object Create](https://github.com/mistyayn/mistyayn.github.io/blob/main/GO.MD#gormdb-object-create)
 
+[Database Name to Struct](https://github.com/mistyayn/mistyayn.github.io/blob/main/GO.MD#table-name-to-struct)
+
 
 # Python Learnings
 
