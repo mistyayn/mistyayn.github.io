@@ -1,7 +1,3 @@
----
-layout: default
----
-
 # Declare and Initialize
 
 It's been a long time since I've used a strong typed language. After using some code from a <a href="https://www.youtube.com/watch?v=jFfo23yIWac&list=RDCMUC8butISFwT-Wl7EV0hUK0BQ&start_radio=1&rv=jFfo23yIWac&t=56">tutorial</a> (<a href="https://github.com/AkhilSharma90/Golang-MySQL-CRUD-Bookstore-Management-API">github repo</a>) I was encountering a problem and couldn't figure out why.
@@ -91,3 +87,6 @@ After creating a unique constraint for one of the values in the user table I dis
 With one exception: I have a another primary key ID in my table (no judging this was for learning purposes). What I learned is that the record that gets returned has all the columns populated except for the primary key. Not the end of the world but insteresting information.
 
 
+# Table Name to struct
+
+It took me a while to figure out that the table name needs to be a multiple of the struct name. In my case the struct user needed to have a corresponding table in the database needed to be named users.
